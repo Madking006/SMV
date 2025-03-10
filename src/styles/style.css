@@ -4,6 +4,8 @@ body {
   background-color: #181818;
   font-family: "montserrat", sans-serif;
   font-weight: bold;
+  max-width: 1780px; /* Altere o valor conforme necessário */
+  min-height: 900px;
 
   margin: 0;
   padding: 0;
@@ -25,7 +27,7 @@ p.titulo {
 }
 
 .navbar{
-  margin: 10px;
+  margin: 0 50px; /*era 10px*/
   width: 300px;
   height: 100%;
   display: flex;
@@ -40,8 +42,9 @@ p.titulo {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 25px; /* era 15px */
   padding: 20px;
+  margin-left: 80px;
   overflow-y: auto;
   
 }
@@ -50,7 +53,7 @@ p.titulo {
 .grid-item {
   background-color: #292929;
   color: white;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -91,13 +94,13 @@ p.titulo {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   color: white;
   font-size: 18px;
-  border-radius: 5px;
-  width: 200px;
+  border-radius: 10px;
+  width: 250px;
 }
 
 .twitch { background-image: linear-gradient(#8c00e9, #460f6b);}
@@ -106,3 +109,25 @@ p.titulo {
 .xcom {background-image: linear-gradient(rgb(0, 0, 0), rgb(90, 90, 90));}
 .tiktok { background-image: linear-gradient(rgb(90, 90, 90), black);}
 .lp {background-color: #00aef3;}
+
+
+@media (max-width: 900px) {
+  .mainboard {
+      display: none; /* Esconde a área de vídeos */
+  }
+
+  .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .navbar {
+      margin: 0; /* Remove a margem lateral */
+  }
+
+  .btn{
+    width: 50vw;
+  }
+}
