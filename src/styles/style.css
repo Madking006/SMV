@@ -4,7 +4,6 @@ body {
   background-color: #181818;
   font-family: "montserrat", sans-serif;
   font-weight: bold;
-  max-width: 1780px; /* Altere o valor conforme necessário */
   min-height: 900px;
 
   margin: 0;
@@ -22,7 +21,7 @@ p.titulo {
 .main {
   display: grid;
   grid-template-columns: 300px 1fr; /* Navbar fixa (300px) e grid flexível */
-  height: 100vh;
+  height: 100svh;
   transform: scaleY(0.95);
 }
 
@@ -51,6 +50,7 @@ p.titulo {
 
 /* Itens do grid */
 .grid-item {
+  height: fit-content;
   background-color: #292929;
   color: white;
   padding: 0px;
